@@ -667,7 +667,6 @@ section {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
   cursor: auto;
   box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.05);
   transition: transform 0.4s var(--easing-silk), box-shadow 0.4s ease;
@@ -689,14 +688,10 @@ section {
   overflow: hidden;
 }
 
-/* ── Photo fills the card perfectly at 3:4 ── */
+/* ── Photo fills the card perfectly without cropping ── */
 .gallery__photo {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
   transition: transform 0.6s var(--easing-silk);
 }
